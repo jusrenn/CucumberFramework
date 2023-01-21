@@ -19,6 +19,16 @@ import java.util.function.Function;
 
 public class ReusableMethods {
 
+    public static Boolean elementIsVisible(WebElement element) {
+        boolean result;
+        try {
+            result = element.isDisplayed();
+        } catch (NoSuchElementException e) {
+            result = false;
+        }
+        return result;
+    }
+
     // Screenshot
     public static void getScreenshot(String name) {
         try {
