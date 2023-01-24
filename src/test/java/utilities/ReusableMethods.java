@@ -23,7 +23,6 @@ import java.util.function.Function;
 
 public class ReusableMethods {
 
-    // Paste from clipboard
     public static String pasteFromClipboard(){
         try {
             Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
@@ -45,7 +44,6 @@ public class ReusableMethods {
         return result;
     }
 
-    // Screenshot
     public static void getScreenshot(String name) {
         try {
             String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -56,7 +54,6 @@ public class ReusableMethods {
         }
     }
 
-    //========Switching Window=====//
     public static void switchToWindow(String targetTitle) {
         String origin = Driver.getDriver().getWindowHandle();
         for (String handle : Driver.getDriver().getWindowHandles()) {
@@ -68,7 +65,6 @@ public class ReusableMethods {
         Driver.getDriver().switchTo().window(origin);
     }
 
-    //========Hover Over=====//
     public static void hover(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(element).perform();
@@ -97,8 +93,6 @@ public class ReusableMethods {
         return elemTexts;
     }
 
-    //   Hard Wait
-    //   waitFor(5);  => waits for 5 second
     public static void waitFor(int second) {
         try {
             Thread.sleep(second * 1000);
@@ -107,7 +101,6 @@ public class ReusableMethods {
         }
     }
 
-    //===============Explicit Wait==============//
     public static WebElement waitForVisibility(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.visibilityOf(element));
@@ -156,7 +149,6 @@ public class ReusableMethods {
         }
     }
 
-    // Fluent Wait
     public static WebElement fluentWait(final WebElement webElement, int timeout) {
         //FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver()).withTimeout(timeinsec, TimeUnit.SECONDS).pollingEvery(timeinsec, TimeUnit.SECONDS);
         FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
