@@ -4,11 +4,7 @@
 .classpath
 .project
 .settings/
-target/
-.DS_Store
 
-/target/
-*/target/**
 **/META-INF/
 !.mvn/wrapper/maven-wrapper.jar
 

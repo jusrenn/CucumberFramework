@@ -1,6 +1,5 @@
 package utilities;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -12,12 +11,9 @@ import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
-import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.function.Function;
 
@@ -42,16 +38,6 @@ public class ReusableMethods {
             result = false;
         }
         return result;
-    }
-
-    public static void getScreenshot(String name) {
-        try {
-            String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-            File file = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(file, new File(System.getProperty("user.dir") + "/target/Screenshots/" + name + date + ".png"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     public static void switchToWindow(String targetTitle) {
