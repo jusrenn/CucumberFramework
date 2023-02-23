@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="11.802">
-    <testcase classname="US1001 Kullanici Google'da arama testi yapar" name="TC01 Kullanici Google'da arama yapabilmeli" time="7.226">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="7.703">
+    <testcase classname="US1001 Kullanici Google'da arama testi yapar" name="TC01 Kullanici Google'da arama yapabilmeli" time="4.95">
         <system-out>
             <![CDATA[* Google anasayfasina git...................................................passed
 * SearchBox'a "Test" yi yaz ve enter'a bas..................................passed
@@ -9,7 +9,7 @@
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="US1001 Kullanici Google'da arama testi yapar" name="TC01 Kullanici Google'da arama yapabilmeli 2" time="4.344">
+    <testcase classname="US1001 Kullanici Google'da arama testi yapar" name="TC01 Kullanici Google'da arama yapabilmeli 2" time="2.682">
         <system-out>
             <![CDATA[* Google anasayfasina git...................................................passed
 * SearchBox'a "Yusuf" yi yaz ve enter'a bas.................................passed

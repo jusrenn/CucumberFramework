@@ -1,5 +1,6 @@
 package utilities;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,12 +16,16 @@ public class Driver {
         if(driver == null) {
             switch (ConfigReader.getProperty("browser")) {
                 case "safari":
+                    WebDriverManager.safaridriver().setup();
                     driver = new SafariDriver();
                     break;
                 case "firefox":
+
+                    WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
                 default:
+                    WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
             }
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
