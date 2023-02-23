@@ -10,12 +10,12 @@ public class GoogleHomePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "(//div[@class='QS5guaa sy4vM'])[2]")
+    @FindBy(xpath = "(//div[@class='QS5gu sy4vM'])[2]")
     public WebElement acceptCookiesButton;
 
-    @FindBy(css = "[name=qcc]")
+    @FindBy(css = "[name=q]")
     public WebElement searchBoxInput;
 
-    @FindBy(id = "result-statsss")
+    @FindBy(id = "result-stats")
     public WebElement resultText;
 }
