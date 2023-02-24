@@ -1,4 +1,4 @@
-@wip
+@Google
 Feature: US1001 Kullanici Google'da arama testi yapar
 
   Scenario Outline: TC01 Kullanici Google'da arama yapabilmeli

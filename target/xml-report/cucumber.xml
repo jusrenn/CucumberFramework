@@ -1,83 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="42.87">
-    <testcase classname="US1001 Kullanici Google'da arama testi yapar" name="TC01 Kullanici Google'da arama yapabilmeli" time="22.27">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[name=q22]&quot;}&#10;  (Session info: headless chrome=110.0.5481.100)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.5.3', revision: '4b786a1e430'&#10;System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.2.1', java.version: '11.0.16'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [e55f9a6cd7c245d8d2690bf8dc1c2246, findElement {using=css selector, value=[name=q22]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.100, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/wj/9f253jhn2b1...}, goog:chromeOptions: {debuggerAddress: localhost:50550}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50550/devtoo..., se:cdpVersion: 110.0.5481.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: e55f9a6cd7c245d8d2690bf8dc1c2246" type="org.openqa.selenium.NoSuchElementException">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="8.844">
+    <testcase classname="US1001 Kullanici Google'da arama testi yapar" name="TC01 Kullanici Google'da arama yapabilmeli" time="4.758">
+        <system-out>
             <![CDATA[* Google anasayfasina git...................................................passed
-* SearchBox'a "Test" yi yaz ve enter'a bas..................................failed
-* Aramanin basariyla yapildigini kontrol et.................................skipped
-* Browser'i kapat...........................................................skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"[name=q22]"}
-  (Session info: headless chrome=110.0.5481.100)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.5.3', revision: '4b786a1e430'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.2.1', java.version: '11.0.16'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e55f9a6cd7c245d8d2690bf8dc1c2246, findElement {using=css selector, value=[name=q22]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.100, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/wj/9f253jhn2b1...}, goog:chromeOptions: {debuggerAddress: localhost:50550}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50550/devtoo..., se:cdpVersion: 110.0.5481.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e55f9a6cd7c245d8d2690bf8dc1c2246
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy19.sendKeys(Unknown Source)
-	at stepDefinitions.GoogleStepDefinition.search_box_a_yi_yaz_ve_enter_a_bas(GoogleStepDefinition.java:26)
-	at ✽.SearchBox'a "Test" yi yaz ve enter'a bas(file:///Users/yusufrenkoglu/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/IdeaProjects/CucumberFramework/src/test/resources/features/Google.feature:6)
+* SearchBox'a "Java" yi yaz ve enter'a bas..................................passed
+* Aramanin basariyla yapildigini kontrol et.................................passed
+* Browser'i kapat...........................................................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="US1001 Kullanici Google'da arama testi yapar" name="TC01 Kullanici Google'da arama yapabilmeli 2" time="20.327">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[name=q22]&quot;}&#10;  (Session info: headless chrome=110.0.5481.100)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.5.3', revision: '4b786a1e430'&#10;System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.2.1', java.version: '11.0.16'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [e55f9a6cd7c245d8d2690bf8dc1c2246, findElement {using=css selector, value=[name=q22]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.100, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/wj/9f253jhn2b1...}, goog:chromeOptions: {debuggerAddress: localhost:50550}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50550/devtoo..., se:cdpVersion: 110.0.5481.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: e55f9a6cd7c245d8d2690bf8dc1c2246" type="org.openqa.selenium.NoSuchElementException">
+    <testcase classname="US1001 Kullanici Google'da arama testi yapar" name="TC01 Kullanici Google'da arama yapabilmeli 2" time="3.843">
+        <system-out>
             <![CDATA[* Google anasayfasina git...................................................passed
-* SearchBox'a "Yusuf" yi yaz ve enter'a bas.................................failed
-* Aramanin basariyla yapildigini kontrol et.................................skipped
-* Browser'i kapat...........................................................skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"[name=q22]"}
-  (Session info: headless chrome=110.0.5481.100)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.5.3', revision: '4b786a1e430'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.2.1', java.version: '11.0.16'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e55f9a6cd7c245d8d2690bf8dc1c2246, findElement {using=css selector, value=[name=q22]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.100, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/wj/9f253jhn2b1...}, goog:chromeOptions: {debuggerAddress: localhost:50550}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50550/devtoo..., se:cdpVersion: 110.0.5481.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e55f9a6cd7c245d8d2690bf8dc1c2246
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy19.sendKeys(Unknown Source)
-	at stepDefinitions.GoogleStepDefinition.search_box_a_yi_yaz_ve_enter_a_bas(GoogleStepDefinition.java:26)
-	at ✽.SearchBox'a "Yusuf" yi yaz ve enter'a bas(file:///Users/yusufrenkoglu/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/IdeaProjects/CucumberFramework/src/test/resources/features/Google.feature:6)
+* SearchBox'a "Cucumber" yi yaz ve enter'a bas..............................passed
+* Aramanin basariyla yapildigini kontrol et.................................passed
+* Browser'i kapat...........................................................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>

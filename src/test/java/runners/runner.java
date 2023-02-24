@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         plugin = {"html:target/cucumber-reports.html", "json:target/json-reports/cucumber.json", "junit:target/xml-report/cucumber.xml"},
         monochrome = true,
         dryRun = false,
-        tags = "@wip"
+        tags = "@Google"
 )
 public class runner {
 }

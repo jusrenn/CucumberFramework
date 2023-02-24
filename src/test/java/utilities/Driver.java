@@ -22,7 +22,6 @@ public class Driver {
                     driver = new SafariDriver();
                     break;
                 case "firefox":
-
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
@@ -40,23 +39,13 @@ public class Driver {
     public static WebDriver getDriverWB() {
 
         if(driver == null) {
-            switch (ConfigReader.getProperty("browser")) {
-                case "safari":
-                    WebDriverManager.safaridriver().setup();
-                    driver = new SafariDriver();
-                    break;
-                case "firefox":
+            ChromeOptions chrome = new ChromeOptions();
+            chrome.setHeadless(true);
 
-                    WebDriverManager.firefoxdriver().setup();
-                    driver = new FirefoxDriver();
-                    break;
-                default:
-                    ChromeOptions chrome = new ChromeOptions();
-                    chrome.setHeadless(true);
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(chrome);
-                    driver = new ChromeDriver();
-            }
+            WebDriverManager.chromedriver().setup();
+
+            driver = new ChromeDriver(chrome);
+
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             driver.manage().window().maximize();
         }
