@@ -3,6 +3,4 @@ runners/runner.class
 utilities/ReusableMethods.class
 stepDefinitions/GoogleStepDefinition.class
 utilities/ConfigReader.class
-utilities/ReusableMethods$1.class
 pages/GoogleHomePage.class
-utilities/ReusableMethods$2.class
