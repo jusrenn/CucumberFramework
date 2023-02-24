@@ -4,6 +4,7 @@
 .classpath
 .project
 .settings/
+target
 
 **/META-INF/
 !.mvn/wrapper/maven-wrapper.jar
