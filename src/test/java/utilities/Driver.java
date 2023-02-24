@@ -27,10 +27,34 @@ public class Driver {
                     driver = new FirefoxDriver();
                     break;
                 default:
-                    //ChromeOptions chrome = new ChromeOptions();
-                    //chrome.setHeadless(true);
                     WebDriverManager.chromedriver().setup();
-                    //driver = new ChromeDriver(chrome);
+                    driver = new ChromeDriver();
+            }
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.manage().window().maximize();
+        }
+        return driver;
+    }
+
+    // Run Without Browser
+    public static WebDriver getDriverWB() {
+
+        if(driver == null) {
+            switch (ConfigReader.getProperty("browser")) {
+                case "safari":
+                    WebDriverManager.safaridriver().setup();
+                    driver = new SafariDriver();
+                    break;
+                case "firefox":
+
+                    WebDriverManager.firefoxdriver().setup();
+                    driver = new FirefoxDriver();
+                    break;
+                default:
+                    ChromeOptions chrome = new ChromeOptions();
+                    chrome.setHeadless(true);
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver(chrome);
                     driver = new ChromeDriver();
             }
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
