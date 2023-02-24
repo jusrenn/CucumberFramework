@@ -1,10 +1,7 @@
 package utilities;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.awt.*;
@@ -13,9 +10,6 @@ import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Function;
 
 public class ReusableMethods {
 
@@ -49,34 +43,6 @@ public class ReusableMethods {
             }
         }
         Driver.getDriver().switchTo().window(origin);
-    }
-
-    public static void hover(WebElement element) {
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(element).perform();
-    }
-
-    //==========Return a list of string given a list of Web Element====////
-    public static List<String> getElementsText(List<WebElement> list) {
-        List<String> elemTexts = new ArrayList<>();
-        for (WebElement el : list) {
-            if (!el.getText().isEmpty()) {
-                elemTexts.add(el.getText());
-            }
-        }
-        return elemTexts;
-    }
-
-    //========Returns the Text of the element given an element locator==//
-    public static List<String> getElementsText(By locator) {
-        List<WebElement> elems = Driver.getDriver().findElements(locator);
-        List<String> elemTexts = new ArrayList<>();
-        for (WebElement el : elems) {
-            if (!el.getText().isEmpty()) {
-                elemTexts.add(el.getText());
-            }
-        }
-        return elemTexts;
     }
 
     public static void waitFor(int second) {
@@ -117,36 +83,5 @@ public class ReusableMethods {
                 waitFor(1);
             }
         }
-    }
-
-    public static void waitForPageToLoad(long timeout) {
-        ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
-            public Boolean apply(WebDriver driver) {
-                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
-            }
-        };
-        try {
-            System.out.println("Waiting for page to load...");
-            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
-            wait.until(expectation);
-        } catch (Throwable error) {
-            System.out.println(
-                    "Timeout waiting for Page Load Request to complete after " + timeout + " seconds");
-        }
-    }
-
-    public static WebElement fluentWait(final WebElement webElement, int timeout) {
-        //FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver()).withTimeout(timeinsec, TimeUnit.SECONDS).pollingEvery(timeinsec, TimeUnit.SECONDS);
-        FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
-                .withTimeout(Duration.ofSeconds(3))//Wait 3 second each time
-                .pollingEvery(Duration.ofSeconds(1));//Check for the element every 1 second
-
-        WebElement element = wait.until(new Function<WebDriver, WebElement>() {
-            public WebElement apply(WebDriver driver) {
-                return webElement;
-            }
-        });
-
-        return element;
     }
 }
