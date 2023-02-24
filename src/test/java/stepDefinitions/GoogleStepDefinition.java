@@ -7,6 +7,7 @@ import org.openqa.selenium.NoSuchElementException;
 import pages.GoogleHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class GoogleStepDefinition {
 
@@ -18,13 +19,10 @@ public class GoogleStepDefinition {
     }
     @Given("SearchBox'a {string} yi yaz ve enter'a bas")
     public void search_box_a_yi_yaz_ve_enter_a_bas(String string) {
-
-        try {
+        if(ReusableMethods.elementIsVisible(google.acceptCookiesButton)) {
             google.acceptCookiesButton.click();
-            google.searchBoxInput.sendKeys(string + Keys.ENTER);
-        } catch (NoSuchElementException e) {
-            google.searchBoxInput.sendKeys(string + Keys.ENTER);
         }
+        google.searchBoxInput.sendKeys(string + Keys.ENTER);
     }
     @Given("Aramanin basariyla yapildigini kontrol et")
     public void aramanin_basariyla_yapildigini_kontrol_et() {

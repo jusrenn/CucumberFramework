@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class GoogleHomePage {
     public GoogleHomePage() {
-        PageFactory.initElements(Driver.getDriver(), this);
+        PageFactory.initElements(Driver.getDriverWB(), this);
     }
 
     @FindBy(xpath = "(//div[@class='QS5gu sy4vM'])[2]")
