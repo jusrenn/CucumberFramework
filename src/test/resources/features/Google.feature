@@ -8,6 +8,6 @@ Feature: US1001 Kullanici Google'da arama testi yapar
     * Browser'i kapat
 
     Examples:
-    |String     |
-    |Test       |
-    |Yusuf      |
+    |String   |
+    |Java     |
+    |Cucumber |
