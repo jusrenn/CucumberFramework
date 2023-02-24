@@ -14,7 +14,6 @@ public class Driver {
     private static WebDriver driver;
 
     public static WebDriver getDriver() {
-
         if(driver == null) {
             switch (ConfigReader.getProperty("browser")) {
                 case "safari":
@@ -37,7 +36,6 @@ public class Driver {
 
     // Run Without Browser
     public static WebDriver getDriverWB() {
-
         if(driver == null) {
             ChromeOptions chrome = new ChromeOptions();
             chrome.setHeadless(true);
