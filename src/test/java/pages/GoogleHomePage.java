@@ -3,12 +3,12 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utilities.Driver;
+import utilities.DriverWeb;
 
 // page_url = https://www.google.com.tr
 public class GoogleHomePage {
     public GoogleHomePage() {
-        PageFactory.initElements(Driver.getDriverNoBrowser(), this);
+        PageFactory.initElements(DriverWeb.getDriverNoBrowser(), this);
     }
 
     @FindBy(xpath = "(//div[@class='QS5gu sy4vM'])[2]")

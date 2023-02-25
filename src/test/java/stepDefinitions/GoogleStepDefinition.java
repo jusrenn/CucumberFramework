@@ -3,10 +3,9 @@ package stepDefinitions;
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
 import pages.GoogleHomePage;
 import utilities.ConfigReader;
-import utilities.Driver;
+import utilities.DriverWeb;
 import utilities.ReusableMethods;
 
 public class GoogleStepDefinition {
@@ -15,7 +14,7 @@ public class GoogleStepDefinition {
 
     @Given("Google anasayfasina git")
     public void google_anasayfasina_git() {
-        Driver.getDriver().get(ConfigReader.getProperty("googleURL"));
+        DriverWeb.getDriver().get(ConfigReader.getProperty("googleURL"));
     }
     @Given("SearchBox'a {string} yi yaz ve enter'a bas")
     public void search_box_a_yi_yaz_ve_enter_a_bas(String string) {
@@ -35,6 +34,6 @@ public class GoogleStepDefinition {
 
     @Given("Browser'i kapat")
     public void Browseri_kapat() {
-        Driver.quit();
+        DriverWeb.quit();
     }
 }

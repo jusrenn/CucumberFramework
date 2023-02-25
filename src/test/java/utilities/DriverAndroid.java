@@ -7,16 +7,13 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class AppiumDriver {
+public class DriverAndroid {
     private static AndroidDriver<AndroidElement> driver;
 
     public static AndroidDriver<AndroidElement> getDriver() {
         if(driver == null) {
             DesiredCapabilities cap = new DesiredCapabilities();
-            cap.setCapability("udid", ConfigReader.getProperty("udid"));
-            cap.setCapability("deviceName", ConfigReader.getProperty("deviceName"));
             cap.setCapability("platformName", ConfigReader.getProperty("platformName"));
-            cap.setCapability("platformVersion", ConfigReader.getProperty("platformVersion"));
             cap.setCapability("appPackage", ConfigReader.getProperty("youtubeAppPackage"));
             cap.setCapability("appActivity", ConfigReader.getProperty("youtubeActivity"));
 
