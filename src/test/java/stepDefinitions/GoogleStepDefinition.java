@@ -31,7 +31,6 @@ public class GoogleStepDefinition {
         Long resultSum = Long.parseLong(resultTextArr[1].replace(".", ""));
 
         Assert.assertTrue(resultSum>0);
-        System.out.println("Sonuc sayisi: " + resultSum);
     }
 
     @Given("Browser'i kapat")

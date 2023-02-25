@@ -35,7 +35,7 @@ public class Driver {
     }
 
     // Run Without Browser
-    public static WebDriver getDriverWB() {
+    public static WebDriver getDriverNoBrowser() {
         if(driver == null) {
             ChromeOptions chrome = new ChromeOptions();
             chrome.setHeadless(true);

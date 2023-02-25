@@ -5,9 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+// page_url = https://www.google.com.tr
 public class GoogleHomePage {
     public GoogleHomePage() {
-        PageFactory.initElements(Driver.getDriverWB(), this);
+        PageFactory.initElements(Driver.getDriverNoBrowser(), this);
     }
 
     @FindBy(xpath = "(//div[@class='QS5gu sy4vM'])[2]")

@@ -46,6 +46,11 @@
             <artifactId>maven-project</artifactId>
             <version>2.2.1</version>
         </dependency>
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>7.4.1</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -65,21 +70,22 @@
                 <version>5.0.0</version>
                 <executions>
                     <execution>
-                        <id>execution</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
+                    <id>execution</id>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
                         <configuration>
-                            <projectName>cucumber-jvm-example</projectName>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-                            <inputDirectory>${project.build.directory}</inputDirectory>
-                            <jsonFiles>
-                                <param>**/json-reports/*.json</param>
-                            </jsonFiles><classificationFiles>->
-                            <param>sample.properties</param>
-                            <param>other.properties</param>
-                        </classificationFiles>
+                        <projectName>cucumber-jvm-example</projectName>
+                        <outputDirectory>${project.build.directory}</outputDirectory>
+                        <inputDirectory>${project.build.directory}</inputDirectory>
+                        <jsonFiles>
+                            <param>**/json-reports/*.json</param>
+                        </jsonFiles>
+                            <classificationFiles>->
+                                <param>sample.properties</param>
+                                <param>other.properties</param>
+                            </classificationFiles>
                         </configuration>
                     </execution>
                 </executions>
@@ -92,7 +98,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
                     <includes>
-                        <include>**/runner*.java</include>
+                        <include>runners/*runner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -102,7 +108,7 @@
                 <version>3.0.0-M4</version>
                 <configuration>
                     <includes>
-                        <include>**/runner*.java</include>
+                        <include>runners/*runner*.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
