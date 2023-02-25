@@ -12,5 +12,5 @@ import org.junit.runner.RunWith;
         dryRun = false,
         tags = "@Google"
 )
-public class runner {
+public class GoogleRunner {
 }

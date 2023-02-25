@@ -98,7 +98,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
                     <includes>
-                        <include>runners/*runner*.java</include>
+                        <include>runners/*</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -108,7 +108,7 @@
                 <version>3.0.0-M4</version>
                 <configuration>
                     <includes>
-                        <include>runners/*runner*.java</include>
+                        <include>runners/*</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
