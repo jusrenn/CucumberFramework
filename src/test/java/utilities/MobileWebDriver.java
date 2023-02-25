@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-public class MobilWebDriver {
+public class MobileWebDriver {
 
     private static WebDriver driver;
 
