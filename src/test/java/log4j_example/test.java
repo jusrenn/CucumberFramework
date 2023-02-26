@@ -2,6 +2,7 @@ package log4j_example;
 
 import org.apache.log4j.Logger;
 import org.junit.Test;
+import utilities.ConfigReader;
 import utilities.DriverWeb;
 
 
@@ -21,5 +22,7 @@ public class test {
         } else {
             logger.info("Title alindi!");
         }
+
+        DriverWeb.quit();
     }
 }
