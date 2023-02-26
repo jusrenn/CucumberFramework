@@ -8,7 +8,7 @@ import utilities.DriverWeb;
 // page_url = https://www.google.com.tr
 public class GoogleHomePage {
     public GoogleHomePage() {
-        PageFactory.initElements(DriverWeb.getDriverNoBrowser(), this);
+        PageFactory.initElements(DriverWeb.getDriver(), this);
     }
 
     @FindBy(xpath = "(//div[@class='QS5gu sy4vM'])[2]")
