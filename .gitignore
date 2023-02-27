@@ -84,4 +84,5 @@ nb-configuration.xml
 ##############################
 .DS_Store
 
-Logs/
+## Log4J2
+*.log

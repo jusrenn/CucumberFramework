@@ -1,14 +1,13 @@
 package log4j_example;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Test;
-import utilities.ConfigReader;
 import utilities.DriverWeb;
-
 
 public class test {
 
-    final static Logger logger = Logger.getLogger(test.class);
+    private static final Logger logger = LogManager.getLogger();
 
     @Test
     public void test01() {
@@ -18,7 +17,7 @@ public class test {
         String title = DriverWeb.getDriver().getTitle();
 
         if(title.equals("")) {
-            logger.fatal("Google anasayfasina ulasilamadi!");
+            logger.info("Google anasayfasina ulasilamadi!");
         } else {
             logger.info("Title alindi!");
         }
